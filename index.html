@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: whitesmoke;
+      }
+
+      h1 {
+        color: #37b877;
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: center;
+      }
+      #main_text {
+        padding: 40px 50px;
+        line-height: 1.8em;
+        color: #191919;
+        text-align: justify;
+      }
+
+      #main {
+        width: 700px;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        font-family: "Roboto Slab", serif;
+        transition: 2s;
+        margin-top: -800px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      #left_block {
+        width: 50%;
+        background-color: #37b877;
+        padding: 1%;
+      }
+
+      #right_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        align-items: center;
+        background-color: #3760b8;
+        padding: 1%;
+      }
+
+      .shadow {
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+        box-shadow: 3px 3px 5px 6px #ccc; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+      }
+
+      .footer {
+        margin-top: 30px;
+        background-color: #37b877;
+        padding: 5% 10%;
+      }
+
+      .source {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .illustration_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      a {
+        font-weight: bolder;
+      }
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+        color: #37b877;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      a:active {
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 700px) {
+        #main {
+          width: 100%;
+        }
+      }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+
+    <link rel="shortcut icon" href="" />
+  </head>
+
+  <script>
+    var url_string = window.location.href; //window.location.href
+    var url = new URL(url_string);
+
+    const loadResponse = () => {
+      var main = document.getElementById("main");
+      main.style.marginTop = "25px";
+    };
+  </script>
+
+  <body onload="loadResponse();">
+    <div id="main">
+      <h1>Menu quintita</h1>
+      <div id="left_block">hello</div>
+      <div id="right_block">
+        <h1>Les boissons chaudes</h1>
+        Les grains de café sont moulus sur le moment pour une fraîcheur maximum
+        et afin de développer tous les arômes. Le café est extrait avec une
+        machine expresso professionnelle pour obtenir un café d’exception.
+
+        <div class="boisson">Expresso</div>
+        <div class="boisson">Déca</div>
+        <div class="boisson">Double expresso</div>
+        <div class="boisson">Allongé</div>
+        <div class="boisson">Cappuccino</div>
+        <div class="boisson">Latte</div>
+
+        Latte Chocolat chaud Quintita : chocolat de dégustation fait à base de
+        morceaux de chocolat (Fairtrade) et de cacao 100% Chocolat chaud
+        classique Thés: 𛲠 thé vert 𛲠 thé noir 𛲠 thé vert au jasmin
+      </div>
+    </div>
+  </body>
+</html>
