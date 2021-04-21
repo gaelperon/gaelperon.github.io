@@ -6,7 +6,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap"
       rel="stylesheet"
     />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Lovers+Quarrel&family=Stalemate&display=swap" rel="stylesheet">
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -23,11 +24,30 @@
       }
 
       h1 {
-        color: #37b877;
-        font-size: 2em;
-        font-weight: bolder;
+        color: #3773b8;
+        font-size: 3em;
+        font-weight: bold;
         text-align: center;
+                text-transform: uppercase;
+
       }
+
+      h2{
+        text-transform: uppercase;
+      }
+
+      .description {
+        font-family: 'Lovers Quarrel', cursive;
+        font-size: 2em;
+        padding: 6px;
+        color: #252323;
+      }
+      .description_small{
+        font-size: 1.2em;
+        padding: 2px;
+
+      }
+
       #main_text {
         padding: 40px 50px;
         line-height: 1.8em;
@@ -38,30 +58,87 @@
       #main {
         width: 700px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         background-color: white;
         font-family: "Roboto Slab", serif;
         transition: 2s;
         margin-top: -800px;
         margin-bottom: 30px;
-        color: white;
+        border-color: #3773b8;
+        border-style: solid;
+        border-width: 5px;
+      }
+
+      #menu_head {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto Slab", serif;
+        padding: 3%;
+      }
+
+      #menu_main {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+      }
+
+      #menu_footer {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      #top_block {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        padding: 2%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+         border-color: #3773b8;
+        border-style: dashed;
+        border-width: 8px;
       }
 
       #left_block {
+                display: flex;
+
         width: 50%;
-        background-color: #37b877;
-        padding: 1%;
+        flex-direction: column;
+                align-items: center;
+
+        justify-content: flex-start;
+        padding: 2%;
+        border-color: #3773b8;
+        border-right-style: solid;
+        border-width: 2px;
+        margin-top: 40px;
       }
 
       #right_block {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         width: 50%;
 
         align-items: center;
-        background-color: #3760b8;
-        padding: 1%;
+        padding: 2%;
+        border-color: #3773b8;
+        border-left-style: solid;
+        border-width: 2px;
+        margin-top: 40px;
+
+      }
+
+      .vertical_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
       }
 
       .shadow {
@@ -74,6 +151,18 @@
         margin-top: 30px;
         background-color: #37b877;
         padding: 5% 10%;
+      }
+
+      .choice_breakfast {
+        font-size: 1em;
+        line-height: 2em;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      .choice_breakfast_description {
+        font-size: 0.6em;
+        font-style: italic;
       }
 
       .source {
@@ -89,6 +178,13 @@
         margin: 30px 0;
         padding-left: 6%;
         padding-right: 6%;
+      }
+
+      .boisson{
+         font-size: 1em;
+        line-height: 2em;
+        text-transform: uppercase;
+        font-weight: bold;
       }
 
       a {
@@ -139,25 +235,91 @@
   </script>
 
   <body onload="loadResponse();">
-    <div id="main">
-      <h1>Menu quintita</h1>
-      <div id="left_block">hello</div>
-      <div id="right_block">
-        <h1>Les boissons chaudes</h1>
-        Les grains de café sont moulus sur le moment pour une fraîcheur maximum
-        et afin de développer tous les arômes. Le café est extrait avec une
-        machine expresso professionnelle pour obtenir un café d’exception.
+    <div id="main" class="shadow">
+      <div id="menu_head">
+        <h1>Menu petit-déjeuner</h1>
+        <div class="description">
+          Les produits de notre petit-déjeuner sont sélectionnés et
+          confectionnés avec le plus grand soin pour régaler vos papilles et
+          vous assurer une belle journée.
+        </div>
+      </div>
+      <div id="top_block">
+        <h2>Il comprend</h2>
+        <div class="choice_breakfast">
+          Une boisson chaude
+          <span class="choice_breakfast_description"
+            >(à cocher dans la liste plus bas)</span
+          >
+        </div>
+        <div class="choice_breakfast">
+          Une orange pressée sur l’instant
+          <span class="choice_breakfast_description"
+            >pour un jus extra frais</span
+          >
+        </div>
+        <div class="choice_breakfast">Un croissant beurre</div>
+        <div class="choice_breakfast">Baguette tradition</div>
+        <div class="choice_breakfast">
+          Un gâteau maison
+          <span class="choice_breakfast_description"
+            >sorti du four le matin même</span
+          >
+        </div>
+        <div class="choice_breakfast">
+          Un oeuf coque bio
+          <span class="choice_breakfast_description">et ses mouillettes</span>
+        </div>
+        <div class="choice_breakfast">
+          Confitures et pâte à tartiner:
+          <span class="choice_breakfast_description"
+            >𛲠 abricot 𛲠 fraise 𛲠 Nutella</span
+          >
+        </div>
+        <div class="choice_breakfast">
+          Beurre <span class="choice_breakfast_description">salé ou doux</span>
+        </div>
+      </div>
 
-        <div class="boisson">Expresso</div>
-        <div class="boisson">Déca</div>
-        <div class="boisson">Double expresso</div>
-        <div class="boisson">Allongé</div>
-        <div class="boisson">Cappuccino</div>
-        <div class="boisson">Latte</div>
+      <div id="menu_main">
+        <div id="left_block">
+          <h2>Sur demande</h2>
 
-        Latte Chocolat chaud Quintita : chocolat de dégustation fait à base de
-        morceaux de chocolat (Fairtrade) et de cacao 100% Chocolat chaud
-        classique Thés: 𛲠 thé vert 𛲠 thé noir 𛲠 thé vert au jasmin
+          <div class="vertical_block">
+            <div class="boisson">Yaourt maison</div>
+            <div class="boisson">Pain aux céréales</div>
+            <div class="boisson">Biscottes</div>
+            <div class="boisson">Fruits frais selon la saison</div>
+            <div class="boisson">
+              Muesli bio: 𛲠 fruits rouges 𛲠 4 céréales Fruits secs: 𛲠 amandes 𛲠
+            </div>
+            <div class="boisson">pruneaux 𛲠 raisins secs</div>
+            <div class="boisson">Lait demi-écrémé bio</div>
+          </div>
+        </div>
+        <div id="right_block">
+          <h2>Les boissons chaudes</h2>
+
+          <div class="description description_small">
+            Les grains de café sont moulus sur le moment pour une fraîcheur
+            maximum et afin de développer tous les arômes. Le café est extrait
+            avec une machine expresso professionnelle pour obtenir un café
+            d’exception.
+          </div>
+
+          <div class="boisson">Expresso</div>
+          <div class="boisson">Déca</div>
+          <div class="boisson">Double expresso</div>
+          <div class="boisson">Allongé</div>
+          <div class="boisson">Cappuccino</div>
+          <div class="boisson">Latte</div>
+          <div class="boisson">Chocolat chaud Quintita <span class="choice_breakfast_description">chocolat de dégustation fait à base de
+          morceaux de chocolat (Fairtrade) et de cacao 100%</span></div>
+          <div class="boisson">Chocolat chaud
+          classique</div>
+          <div class="boisson">Thés <span class="choice_breakfast_description"></span>𛲠 thé vert 𛲠 thé noir 𛲠 thé vert au jasmin</span></div>
+
+        </div>
       </div>
     </div>
   </body>
